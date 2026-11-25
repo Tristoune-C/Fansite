@@ -35,7 +35,9 @@ h1{
     object-fit:cover;
     width:100%;
     box-shadow:0 2px 6px  #121111;
+
 }
+
 
 .introduction img:hover{
     transform: translateY(-5px);
@@ -81,7 +83,7 @@ h2{
 .rpi img{
     width:100%;
     aspect-ratio:1;
-    object-fit:cover
+    object-fit:cover;
 }
 
 .rpi div{
@@ -132,6 +134,7 @@ div >p{
     height: 30px;
     margin-top: .5rem;
     margin-bottom: .5rem;
+    height: auto;
 }
 
 
@@ -198,6 +201,10 @@ div >p{
 
 .mosaique2 img:hover{
     transform:translateY(-5px)
+}
+
+.mosaique figure {
+    margin: 0;
 }
 
 div > img{
@@ -275,4 +282,74 @@ h2{
 p{
     font-size:.95rem;
     margin-bottom:.5rem
+}
+
+img {
+    max-width: 100%;
+}
+
+@media (max-width: 1200px) {
+    .mosaique,
+    .sections_pp {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .mosaique2 {
+        columns: 4;
+    }
+}
+
+
+
+@media (max-width: 900px) {
+    .mosaique,
+    .perso2,
+    .sections_rpi,
+    .sections_pp {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .sections_pp1 {
+        grid-template-columns: 1fr;
+    }
+
+    .mosaique2 {
+        columns: 3;
+    }
+}
+
+@media (max-width: 600px) {
+    nav ul {
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+        gap: 1rem;
+    }
+
+    .mosaique,
+    .perso2,
+    .sections_rpi,
+    .sections_pp {
+        grid-template-columns: 1fr;
+    }
+
+    .mosaique2 {
+        columns: 2;
+        column-gap: 10px;
+    }
+
+    .mosaique2 img {
+        margin-bottom: 10px;
+    }
+
+    .articles {
+        flex-basis: 100%;
+        margin-inline: 0;
+    }
+
+    .sections_rpi,
+    .sections_pp,
+    .mosaique3 {
+        padding: 10px;
+    }
 }
