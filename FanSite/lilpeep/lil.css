@@ -1,0 +1,477 @@
+body { /*BIOGRAPHIE.HTML*/
+  margin: 0;
+  background: #121111;
+  color: #eee;
+  font-family: Arial, sans-serif;
+}
+
+.lilbarre {
+  background: #1c1c1c;
+  padding: 18px 30px;
+  border-bottom: 2px solid #f7c6d9;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #cdb4f0;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links a:hover {    /* deviens rouge quand on mets la souris dessus */
+  color: #e63946;
+}
+
+.bio-haut {
+  text-align: center;
+  padding: 70px 20px;
+  border-bottom: 1px solid #333333;
+}
+
+.bio-haut h1 {
+  font-size: 64px;
+  color: #f7c6d9;
+  margin: 0;
+  letter-spacing: 3px; /* separe les lettres en elle */
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.bio-haut p {
+  color: #cdb4f0;
+  margin: 10px 0 0;
+  font-family: 'UnifrakturMaguntia', serif;
+
+}
+
+.bio {
+  display: flex; /* IMG */
+  align-items: center;
+  gap: 40px;
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.bio img {
+  width: 300px;
+  border-radius: 12px;
+  border: 3px solid #f7c6d9;
+}
+
+.bio h2 {
+  color: #cdb4f0;
+  margin-top: 0;
+}
+
+.bio img {
+  transition: 0.3s;
+}
+
+.bio img:hover {   /* pour que l'image bouge */ 
+  transform: scale(1.08) rotate(-3deg);
+  border-color: #f7c6d9;
+}
+
+@keyframes briller { /*effet briller */
+  0%, 100% { text-shadow: 0 0 4px #f7c6d9; } /*jeu de couleur */
+  50% { text-shadow: 0 0 18px #f7c6d9, 0 0 30px }
+}
+
+.bio-haut h1 {
+  animation: briller 2s ease-in-out infinite; /* DELAIS du jeu de couleur */
+}
+.heritage {
+  max-width: 860px;
+  margin: 0 auto 60px; /* POUR ETRE AU CENTRE */
+  padding: 30px;
+  background: #1c1c1c;
+  border-left: 5px solid #e63946;
+  border-radius: 0 12px 12px 0;
+}
+
+.heritage h2 {
+  color: #f7c6d9;
+  margin-top: 0;
+}
+
+.footerlil {
+  display: flex;            
+  justify-content: center;       /*centre le footer */
+  gap: 100px;
+  background: #1c1c1c;
+  padding: 40px 20px;
+  border-top: 2px solid #f7c6d9;
+}
+
+.footerlil div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footerlil h3 {
+  color: #f7c6d9;
+  margin: 0 0 8px;
+}
+
+.footerlil a {
+  color: #cdb4f0;
+  text-decoration: none;
+}
+
+.footerlil a:hover {
+  color: #e63946; /* pareil, deviens rouge quandla souris et dessus */
+}
+
+/* disco.html*/
+
+.disco {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.disco h1 {
+  font-size: 64px;
+  color: #f7c6d9;
+  text-align: center;
+  margin: 0 0 30px;
+}
+
+.disco h2 {
+  color: #cdb4f0;
+  margin-top: 60px;
+}
+
+.disco em {
+  color: #f7c6d9;
+}
+
+.albums {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 25px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.album img:hover{
+    transform: translateY(-8px);    /* fais bouger l'image */
+}
+
+.album {
+  text-align: center;
+}
+
+.album img {
+  width: 100%;
+  aspect-ratio: 1;
+}
+
+.hits {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.hits img {
+  width: 250px;
+  height: 250px;
+}
+
+@keyframes flotter {  /*animation */
+  0% {      /*DEBUT de l'anim*/
+    transform: translateY(0);  /* permet de modifier l'apparence*/
+  }
+  50% {  /* moitié */
+    transform: translateY(-4px);
+  }
+  100% { /*fin */
+    transform: translateY(0);
+  }
+}
+
+.disco-intro h1 {
+  animation: flotter 3s ease-in-out infinite; /*ralenti haut bas */
+}   
+.album img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.album h3 {
+  color: #f7c6d9;
+  font-size: 16px;
+  margin: 12px 0 5px;
+}
+
+.album p {
+  color: #b4b2a9;
+  margin: 0;
+}
+
+
+.disco-intro,
+.disco-hits {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.disco-intro h1 {
+  font-size: 64px;
+  color: #f7c6d9;
+  margin: 0 0 20px;
+}
+
+.disco-hits h2 {
+  color: #cdb4f0;
+}
+
+.disco-intro p,
+.disco-hits p {
+  color: #d3d1c7;
+}
+
+.disco-hits em {
+  color: #f7c6d9;
+}
+
+/* GALERIE.HTML */
+
+.galerie-haut {
+  text-align: center;
+  padding: 60px 20px 30px;
+}
+
+.galerie-haut h1 {
+  font-family: 'Pacifico';
+  font-size: 64px;
+  color: #f7c6d9;
+  letter-spacing: 3px;
+  margin: 0;
+}
+
+.galerie-haut p {
+  color: #cdb4f0;
+  font-family: 'Karla', sans-serif;
+}
+
+.mosaique {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-auto-rows: 200px;
+  gap: 12px;
+  max-width: 1000px;
+  margin: 0 auto 60px;
+  padding: 0 20px;
+}
+
+.mosaique figure { /*pour supprimer les espaces entre les photos */
+  margin: 0;
+}
+
+.mosaique img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.grande {
+  grid-column: span 2; /* la photo s'étale sur 2 colonnes*/
+  grid-row: span 2; /*a photo s'étale sur 2 lignes*/
+}
+
+.haute {
+  grid-row: span 2;
+}
+
+.large {
+  grid-column: span 2;
+}
+
+/* CHRONOLOHIE.HTML*/
+
+  .chrono-titre {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 64px;
+  color: #f7c6d9;
+  letter-spacing: 3px;
+  text-align: center;
+  margin: 60px 0 0;
+}
+
+.intro-chrono {
+  text-align: center;
+  color: #cdb4f0;
+}
+
+.frise {  /*la barre qui fais la frise chrono */
+  max-width: 700px;
+  margin: 50px auto;
+  border-left: 3px solid #cdb4f0;
+  padding-left: 35px;
+}
+
+.etape {
+  position: relative;
+  margin-bottom: 40px;  /* espace entre les dates */
+}
+
+.etape::before {  /*point sur la barre */
+  content: "";
+  position: absolute;
+  left: -46px;
+  top: 4px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #f7c6d9;
+  border: 3px solid #111111;
+}
+
+.date {
+  background: #f7c6d9;
+  color: #111111;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.etape h3 {
+  color: #f7c6d9;
+  margin: 12px 0 5px;
+}
+
+.etape p {
+  color: #d3d1c7;
+  margin: 0;
+}
+
+.importante::before,  /*toutes les etapes ont un point rose. la date de mort elle change son point en rouge*/
+.importante .date {
+  background: #e63946; /* pour mettre en valeur la date de sa mort qui est le moment le plus important*/
+}
+
+.importante .date {
+  color: #ffffff;
+}
+
+.importante h3 {
+  color: #e63946;
+}
+
+@media (max-width: 1024px) {
+  .footerlil {
+    gap: 60px;
+  }
+
+  .mosaique {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .lilbarre {
+    padding: 15px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 12px 20px;
+  }
+
+  .bio-haut {
+    padding: 50px 20px;
+  }
+
+  .bio-haut h1,
+  .disco-intro h1,
+  .galerie-haut h1,
+  .chrono-titre {
+    font-size: 44px;
+  }
+
+  .bio {
+    flex-direction: column;
+    margin: 40px auto;
+  }
+
+  .bio img {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .heritage {
+    margin: 0 20px 50px;
+    padding: 20px;
+  }
+
+  .albums {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hits {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mosaique {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 160px;
+  }
+
+  .frise {
+    margin: 40px 20px 40px 30px;
+  }
+
+  .footerlil {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .footerlil div {
+    align-items: center;
+  }
+}
+
+@media (max-width: 400px) {
+  .bio-haut h1,
+  .disco-intro h1,
+  .galerie-haut h1,
+  .chrono-titre {
+    font-size: 36px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
+
+  .albums {
+    grid-template-columns: 1fr;
+  }
+
+  .mosaique {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 220px;
+  }
+
+  .grande,
+  .large {
+    grid-column: span 1;
+  }
+}
