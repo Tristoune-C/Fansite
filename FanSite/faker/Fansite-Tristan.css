@@ -1,0 +1,471 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Orbitron', sans-serif;
+}
+
+body{
+  background-image: url("T1-logo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.navbar {
+    background-color: #1A0705 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 40px;
+    width: 100%;
+    min-height: 60px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  list-style: none;
+  padding: 0; 
+}
+
+.nav-links a {
+  list-style: none;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+.nav-links a:hover {
+  opacity: 0.7;
+}
+
+.centered {
+text-align: center;
+margin: 20px 0;
+}
+
+.centered-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.menu-pages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 350px;
+    margin: 20px auto;
+}
+
+/* Style des boutons */
+.menu-pages a {
+    display: block;
+    width: 550px;
+    padding: 15px;
+    border: 4px solid black;
+    color: white;
+    background-color: #F80011;
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* Décalage des boutons */
+.menu-pages a:nth-child(1) {
+    align-self: flex-start;
+}
+
+.menu-pages a:nth-child(2) {
+    align-self: flex-end;
+}
+
+.menu-pages a:nth-child(3) {
+    align-self: flex-start;
+}
+
+/* Effet */
+.menu-pages a:hover {
+    background-color: black;
+    color: white;
+}
+
+
+
+.bio-container {
+    width: 90%;
+    margin: 20px auto;
+}
+
+
+.bio-title {
+    text-align: center;
+    border: 4px solid black;
+    width: 80%;
+    margin: 0 auto 35px auto;
+    padding: 10px;
+}
+
+
+.intro {
+    width: 80%;
+    margin: 0 auto 15px auto;
+    padding: 20px;
+    border: 4px solid black;
+    text-align: justify;
+}
+
+
+.bio-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    grid-template-areas:
+        "p2 photo1"
+        "photo2 p3";
+
+    column-gap: 25px;
+    row-gap: 45px;
+
+    align-items: start;
+}
+
+
+.paragraph2 {
+    grid-area: p2;
+    border: 4px solid black;
+    padding: 20px;
+    text-align: justify;
+    align-self: start;
+}
+
+
+.photo1 {
+    grid-area: photo1;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border: 4px solid black;
+    display: block;
+}
+
+
+.paragraph3 {
+    grid-area: p3;
+    border: 4px solid black;
+    padding: 20px;
+    text-align: justify;
+    align-self: start;
+}
+
+
+.photo2 {
+    grid-area: photo2;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border: 4px solid black;
+}
+
+.intro,
+.paragraph2,
+.paragraph3 {
+    background-color: rgba(245, 245, 245, 0.96);
+    color: #202020;
+    border: 2px solid #333;
+    border-left: 6px solid #DB012C;
+    border-radius: 8px;
+}   
+.carreer h1 {
+    text-align: center;
+    font-size: 45px;
+    color: white;
+    background-color: #DB012C;
+    padding: 20px;
+    margin-bottom: 35px;
+    border-radius: 10px;
+    
+}
+
+
+.carreer ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    padding-left: 35px;
+}
+
+/* Ligne verticale de la timeline */
+.carreer ul::before {
+    content: "";
+    position: absolute;
+    left: 8px;
+    top: 10px;
+    bottom: 10px;
+    width: 4px;
+    background-color: #DB012C;
+}
+
+/* Cartes des années */
+.carreer ul li {
+    background-color: #ffffff;
+    border-left: 5px solid #DB012C;
+    border-radius: 8px;
+    padding: 20px;
+    font-size: 17px;
+    line-height: 1.6;
+    position: relative;
+    transition: 0.3s;
+}
+
+/* Points sur la timeline */
+.carreer ul li::before {
+    content: "";
+    position: absolute;
+    left: -37px;
+    top: 25px;
+    width: 14px;
+    height: 14px;
+    background-color: #DB012C;
+    border: 3px solid white;
+    border-radius: 50%;
+}
+
+/* Effet au survol */
+.carreer ul li:hover {
+    transform: translateX(8px);
+    border-left: 8px solid white;
+}
+
+/* Dernier paragraphe : Hall of Legends */
+.carreer > p {
+    background-color: #ffffff;
+    border: 2px solid #DB012C;
+    border-radius: 8px;
+    padding: 25px;
+    margin-top: 40px;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+/* Adaptation mobile */
+@media screen and (max-width: 600px) {
+    .carreer {
+        width: 95%;
+    }
+
+    .carreer h1 {
+        font-size: 32px;
+    }
+
+    .carreer ul li {
+        font-size: 14px;
+    }
+}
+
+.palmares {
+    width: 85%;
+    margin: 30px auto;
+    color: white;
+}
+
+.palmares h1 {
+    text-align: center;
+    font-size: 40px;
+    background-color: #DB012C;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+/* Grande carte Worlds */
+.worlds {
+    background-color: #242424;
+    padding: 25px;
+    border-left: 6px solid #DB012C;
+    margin-bottom: 20px;
+}
+
+/* Grille des trophées */
+.worlds-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.worlds-grid div {
+    background-color: #383838;
+    padding: 15px;
+    text-align: center;
+}
+
+.worlds-grid p {
+    color: #E8C76A;
+    font-size: 22px;
+    margin-top: 10px;
+}
+
+/* Autres catégories */
+.palmares-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.palmares-grid section {
+    background-color: #242424;
+    padding: 20px;
+    border-left: 5px solid #DB012C;
+}
+
+
+.palmares h3 {
+    color: #DB012C;
+    margin-bottom: 15px;
+}
+
+.palmares ul {
+    list-style: none;
+    line-height: 1.8;
+}
+
+/* Survol des cartes */
+.palmares-grid section:hover,
+.worlds:hover {
+    border-left-color: white;
+    transition: 0.3s;
+}
+
+@media screen and (max-width: 700px) {
+    .palmares-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .worlds-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+
+footer {
+    background-color: #242629;
+    color: white;
+    padding: 35px 10%;
+    margin-top: 50px;
+    border-top: 4px solid #DB012C;
+}
+
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+}
+
+
+.footer-content h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #DB012C;
+}
+
+
+.footer-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+
+.footer-content li {
+    margin-bottom: 10px;
+}
+
+.footer-content a {
+    color: #CCCCCC;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    transition: 0.3s;
+}
+
+.footer-content a:hover {
+    color: white;
+    padding-left: 5px;
+}
+
+
+@media screen and (max-width: 600px) {
+    .footer-content {
+        gap: 40px;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .nav-links {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .centered_image {
+        flex-direction: column;
+    }
+
+    .centered_image img {
+        width: 90%;
+        height: auto;
+    }
+
+    .menu-pages {
+        width: 85%;
+    }
+
+    .menu-pages a {
+        width: 100%;
+    }
+
+    .bio-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "p2"
+            "photo1"
+            "photo2"
+            "p3";
+    }
+
+    .bio-container,
+    .intro {
+        width: 95%;
+    }
+
+    .carreer {
+        width: 95%;
+    }
+
+    .palmares-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .worlds-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-content {
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+}
