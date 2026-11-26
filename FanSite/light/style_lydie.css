@@ -288,6 +288,47 @@ img {
     max-width: 100%;
 }
 
+
+.footer {
+  display: flex;            
+  justify-content: center;   
+  gap: 50px;
+  background-color: #121111;
+  padding: 20px 10px;
+  border-top: 2px solid #f7c6d9;
+}
+
+.footer div {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+
+}
+
+.footer h3 {
+  color: #f7c6d9;
+  margin: 0 0 5px;
+}
+
+.footer a {
+  color: #f7c6d9;
+  text-decoration: none;
+}
+
+
+.generique {
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 0 10px;
+}
+
+.generique iframe {
+    border: 0;
+    border-radius: 15px;
+}
+
+
+
 @media (max-width: 1200px) {
     .mosaique,
     .sections_pp {
